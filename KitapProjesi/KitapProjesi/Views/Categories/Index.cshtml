@@ -1,0 +1,51 @@
+﻿@model IEnumerable<KitapProjesi.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+}
+
+
+
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    <label>Kategori</label>
+                </th>
+                <th>
+                    Güncelle
+                </th>
+                <th>
+                    Detaylar
+                </th>
+                <th>
+                    Sil
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryName)
+                    </td>
+                    <td>
+                        <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.CategoryId">Düzenle</a> |
+                    </td>
+                    <td>
+                        <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.CategoryId">Detaylar</a> |
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.CategoryId">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>
+        <a class="btn btn-primary" asp-action="Create">Kategori Ekle</a>
+    </p>
+</div>

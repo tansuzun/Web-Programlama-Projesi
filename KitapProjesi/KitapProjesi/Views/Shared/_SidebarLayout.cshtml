@@ -1,0 +1,57 @@
+﻿
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link href="~/Sidebar/sidebar.css" rel="stylesheet" />
+
+<body>
+<div class="sidebar-container">
+    <div class="sidebar-logo">
+        Admin Panel
+    </div>
+    <ul class="sidebar-navigation">
+        <li>
+            <a href="/Home/Index">
+                Homepage
+            </a>
+        </li>
+        <li>
+            <a href="/Books/Index">
+               Kitap
+            </a>
+        </li>
+        <li>
+            <a href="/Categories/Index">
+               Kategori
+            </a>
+        </li>
+        <li>
+            <a href="/Publishers/Index">
+                Yayınevi
+            </a>
+        </li>
+        <li>
+            <a href="/Categories/Author">
+                 Yazar
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="content-container">
+
+    <div class="container-fluid">
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+    </div>
+</div>
+
+@RenderSection("scripts", required: false)
+</body>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
