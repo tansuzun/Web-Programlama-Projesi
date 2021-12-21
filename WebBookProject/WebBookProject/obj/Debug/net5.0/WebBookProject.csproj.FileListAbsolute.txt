@@ -184,3 +184,8 @@ C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProjec
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Create.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Delete.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Details.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Edit.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Index.cshtml.g.cs

@@ -51,17 +51,18 @@ namespace WebBookProject.Data
                 Email = "b191210073@sakarya.edu.tr",
                 Name = "Tansu",
                 Surname="UZUN"
-            }, "123").GetAwaiter().GetResult();
+            }, "Abc123*").GetAwaiter().GetResult();
 
             _userManager.CreateAsync(new ApplicationUser
             {
                 Email = "b191210061@sakarya.edu.tr",
                 Name = "Melike",
                 Surname = "SOYDAN"
-            }, "123").GetAwaiter().GetResult();
+            }, "Abc123*").GetAwaiter().GetResult();
 
-            _userManager.AddToRoleAsync(_db.Users.FirstOrDefaultAsync(u => u.Email == "b191210061@sakarya.edu.tr" || 
-            u.Email== "b191210073@sakarya.edu.tr").GetAwaiter().GetResult(), "Admin").GetAwaiter().GetResult();
+            _userManager.AddToRoleAsync(_db.Users.FirstOrDefaultAsync(u => u.Email == "b191210061@sakarya.edu.tr").GetAwaiter().GetResult(), "Admin").GetAwaiter().GetResult();
+           
+            _userManager.AddToRoleAsync(_db.Users.FirstOrDefaultAsync(u => u.Email == "b191210073@sakarya.edu.tr").GetAwaiter().GetResult(), "Admin").GetAwaiter().GetResult();
 
         }
     }

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">KitapProjesi</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Kitap</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -19,13 +22,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Kategori</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Publishers" asp-action="Index">Yayınevi</a>
@@ -39,11 +39,57 @@
             </div>
         </nav>
     </header>
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="header__top__right__auth">
+            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hoş geldiniz, @User.Identity.Name!</a>
+        </div>
+        <div class="header__top__right__auth">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-dark">Çıkış</button>
+            </form>
+        </div>
+    }
+    else
+    {
+        @*<div class="header__top__right__auth">
+            <a asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-bell"></i> ggfgKaydol</a>
+        </div>
+        <div class="header__top__right__auth">
+            <a asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-user"></i> Giriş Yap</a>
+        </div>*@
+    }
+    @if (User.IsInRole("Kullanici") || User.IsInRole("Admin"))
+    {
+        @*<li>
+            <a>Müsteri</a>
+            <ul class="header__menu__dropdown">
+                <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Alışveriş Sepeti</a></li>
+                <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Sipariş Takibi</a></li>
+                <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Kullanıcı Bilgileri</a></li>
+            </ul>
+        </li>*@
+    }
+
+    @if (User.IsInRole("Admin"))
+    {
+        <li>
+            <a>Admin</a>
+            <ul class="header__menu__dropdown">
+                <li><a asp-area="Admin" asp-controller="Categories" asp-action="Index">Kategoriler</a></li>
+                <li><a asp-area="Admin" asp-controller="Books" asp-action="Index">Kitaplar</a></li>
+            </ul>
+        </li>
+    }
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
 
     <footer class="border-top footer text-muted">
         <div class="container">

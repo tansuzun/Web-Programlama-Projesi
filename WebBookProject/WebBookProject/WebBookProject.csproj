@@ -33,4 +33,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Kullanici\Controllers\" />
+    <Folder Include="Areas\Kullanici\Data\" />
+    <Folder Include="Areas\Kullanici\Models\" />
+    <Folder Include="Areas\Kullanici\Views\" />
+  </ItemGroup>
+
 </Project>
