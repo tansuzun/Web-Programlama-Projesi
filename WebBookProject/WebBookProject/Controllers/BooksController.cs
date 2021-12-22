@@ -50,6 +50,29 @@ namespace WebBookProject.Controllers
         // GET: Books/Create
         public IActionResult Create()
         {
+            List<SelectListItem> categories = (from x in _context.Category.ToList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.CategoryName,
+                                                   Value = x.CategoryId.ToString()
+                                               }).ToList();
+            ViewBag.Category = categories;
+
+            List<SelectListItem> publishers = (from x in _context.Publisher.ToList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.PublisherName,
+                                                   Value = x.PublisherId.ToString()
+                                               }).ToList();
+            ViewBag.Publisher = publishers;
+
+            List<SelectListItem> authors = (from x in _context.Author.ToList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.AuthorName+x.AuthorLastname,
+                                                   Value = x.AuthorId.ToString()
+                                               }).ToList();
+            ViewBag.Author = authors;
             ViewData["AuthorId"] = new SelectList(_context.Author, "AuthorId", "AuthorId");
             ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "CategoryId");
             ViewData["PublisherId"] = new SelectList(_context.Publisher, "PublisherId", "PublisherId");

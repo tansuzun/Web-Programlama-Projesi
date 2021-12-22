@@ -1,14 +1,13 @@
 ﻿@model WebBookProject.Models.Category
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Kategori Detayları";
 }
 
-<h1>Details</h1>
+<h1>Kategori Detayları</h1>
 
 <div>
-    <h4>Category</h4>
-    <hr />
+ 
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CategoryName)
@@ -19,6 +18,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.CategoryId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.CategoryId">Düzenle</a> |
+    <a class="btn btn-info" asp-action="Index">Geri Dön</a>
 </div>

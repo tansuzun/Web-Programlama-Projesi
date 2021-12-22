@@ -18,6 +18,6 @@ namespace WebBookProject.Data
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Publisher> Publisher { get; set; }
         public DbSet<Author> Author { get; set; }
-        public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        
     }
 }

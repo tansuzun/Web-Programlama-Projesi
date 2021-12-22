@@ -1,15 +1,14 @@
 ﻿@model WebBookProject.Models.Book
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detaylar";
     Layout = "~/Views/Shared/_SidebarLayout.cshtml";
 }
 
 <h1>Details</h1>
 
 <div>
-    <h4>Book</h4>
-    <hr />
+
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BookName)
@@ -51,5 +50,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.BookId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info" asp-action="Index">Geri Dön</a>
 </div>

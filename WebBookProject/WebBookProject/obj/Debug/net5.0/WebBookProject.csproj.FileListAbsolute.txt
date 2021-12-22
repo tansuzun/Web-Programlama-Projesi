@@ -66,7 +66,6 @@ C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProjec
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\WebBookProject.TagHelpers.input.cache
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\WebBookProject.TagHelpers.output.cache
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\WebBookProject.RazorCoreGenerate.cache
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
@@ -157,7 +156,6 @@ C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProjec
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Shared\_SidebarLayout.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Books\Create.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Books\Delete.cshtml.g.cs
@@ -179,13 +177,15 @@ C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProjec
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Authors\Details.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Authors\Edit.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\Authors\Index.cshtml.g.cs
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Create.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Delete.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Details.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Edit.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Index.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
