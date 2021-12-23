@@ -1,31 +1,31 @@
 ﻿@model IEnumerable<WebBookProject.Models.Author>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Yazar";
+    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+
 }
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AuthorName)
+                Yazar Adı
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AuthorLastname)
+                Yazar Soyadı
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Biography)
+                Biyografi
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.AuthorName)
@@ -37,11 +37,19 @@
                 @Html.DisplayFor(modelItem => item.Biography)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.AuthorId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AuthorId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AuthorId">Delete</a>
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.AuthorId">Düzenle</a>
+            </td>
+            <td>
+                <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.AuthorId">Detaylar</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.AuthorId">Sil</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Yazar Ekle</a>
+</p>

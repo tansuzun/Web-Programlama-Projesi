@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebBookProject.Migrations
+namespace WebBookProject.Data.Migrations
 {
-    public partial class deneme3 : Migration
+    public partial class photo1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

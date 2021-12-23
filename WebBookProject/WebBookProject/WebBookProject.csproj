@@ -40,6 +40,7 @@
     <Folder Include="Areas\Kullanici\Data\" />
     <Folder Include="Areas\Kullanici\Models\" />
     <Folder Include="Areas\Kullanici\Views\" />
+    <Folder Include="wwwroot\Photos\" />
   </ItemGroup>
 
 </Project>

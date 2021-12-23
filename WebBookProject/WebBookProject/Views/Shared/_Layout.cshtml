@@ -8,39 +8,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - KitapProjesi</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    
+   @* <link rel="stylesheet" href="~/css/site.css" />*@
+    <link href="~/Navbar/NavbarStyle.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Kitap</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Kategori</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Publishers" asp-action="Index">Yayınevi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Kitap</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Authors" asp-action="Index">Yazar</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
+        <nav class="navbar navbar-expand-custom navbar-mainbg">
+            <a class="navbar-brand navbar-logo"> <img class="img-responsive2" src="~/Navbar/lotus.png" style="  width: 65px;">Lotus Kitap</a>
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-area="" asp-controller="Categories" asp-action="Index">Kategori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Publishers" asp-action="Index">Yayınevi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Authors" asp-action="Index">Yazar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Books" asp-action="Index">Kitap</a>
+                    </li>
+                </ul>
+                <partial name="_LoginPartial" />
             </div>
         </nav>
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Kitap</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Kategori</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Publishers" asp-action="Index">Yayınevi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Kitap</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Authors" asp-action="Index">Yazar</a>
+                            </li>
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>*@
     </header>
 
     @if (SignInManager.IsSignedIn(User))
@@ -49,30 +78,30 @@
             <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hoş geldiniz, @User.Identity.Name!</a>
         </div>
         @*<div class="header__top__right__auth">
-            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                <button type="submit" class="nav-link btn btn-link text-dark">Çıkış</button>
-            </form>
-        </div>*@
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link text-dark">Çıkış</button>
+                </form>
+            </div>*@
     }
     else
     {
         @*<div class="header__top__right__auth">
-            <a asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-bell"></i> ggfgKaydol</a>
-        </div>
-        <div class="header__top__right__auth">
-            <a asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-user"></i> Giriş Yap</a>
-        </div>*@
+                <a asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-bell"></i> ggfgKaydol</a>
+            </div>
+            <div class="header__top__right__auth">
+                <a asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-user"></i> Giriş Yap</a>
+            </div>*@
     }
     @if (User.IsInRole("Kullanici") || User.IsInRole("Admin"))
     {
         @*<li>
-            <a>Müsteri</a>
-            <ul class="header__menu__dropdown">
-                <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Alışveriş Sepeti</a></li>
-                <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Sipariş Takibi</a></li>
-                <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Kullanıcı Bilgileri</a></li>
-            </ul>
-        </li>*@
+                <a>Müsteri</a>
+                <ul class="header__menu__dropdown">
+                    <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Alışveriş Sepeti</a></li>
+                    <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Sipariş Takibi</a></li>
+                    <li><a asp-area="Kullanici" asp-controller="Sepet" asp-action="Index">Kullanıcı Bilgileri</a></li>
+                </ul>
+            </li>*@
     }
 
     @if (User.IsInRole("Admin"))
@@ -101,7 +130,8 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    @*  <script src="~/js/site.js" asp-append-version="true"></script>*@
+    <script src="~/Navbar/NavbarJs.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

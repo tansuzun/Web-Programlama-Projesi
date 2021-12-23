@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "61gGWHtRm784RXtd0EAAxOjVPcI4FfBk1+tORg4ih0Om3xkZHAyVgS0M4GPEuwp+l6QAXPPQsM0lYIcBOrlGvw==",
+  "dgSpecHash": "mlTExChTSFhq8QTV9IgVE0LbiGkBW+BvLftLg6zXjhxDNY4UB3nlPzHcKeNy+Cryt0YWUwV9njIKD1jOb2Fg7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\Web-Programlama-Projesi\\WebBookProject\\WebBookProject\\WebBookProject.csproj",
+  "projectFilePath": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\WebBookProject\\WebBookProject\\WebBookProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tansu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\tansu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",

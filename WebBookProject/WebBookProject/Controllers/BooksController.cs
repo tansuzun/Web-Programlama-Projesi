@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -84,14 +85,57 @@ namespace WebBookProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BookId,BookName,publishYear,Description,ImageUrl,CategoryId,PublisherId,AuthorId")] Book book)
+        public async Task<IActionResult> Create([Bind("BookId,BookName,publishYear,Description,ImageUrl,CategoryId,PublisherId,AuthorId")] AddBook book)
         {
-            if (ModelState.IsValid)
+
+            Book newBook = new Book();
+            if (book.ImageUrl != null)
             {
-                _context.Add(book);
+                var extension = Path.GetExtension(book.ImageUrl.FileName);
+                var newImageName = Guid.NewGuid() + extension;
+                var location = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Photos/", newImageName);
+                var stream = new FileStream(location, FileMode.Create);
+                book.ImageUrl.CopyTo(stream);
+                newBook.ImageUrl = newImageName;
+            }
+            newBook.BookName = book.BookName;
+            newBook.Author = book.Author;
+            newBook.AuthorId = book.AuthorId;
+            newBook.Category = book.Category;
+            newBook.CategoryId = book.CategoryId;
+            newBook.Description = book.Description;
+            newBook.Publisher = book.Publisher;
+            newBook.PublisherId = book.PublisherId;
+            newBook.publishYear = book.publishYear;
+           // if (ModelState.IsValid)
+           // {
+                _context.Add(newBook);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            // }
+            List<SelectListItem> categories = (from x in _context.Category.ToList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.CategoryName,
+                                                   Value = x.CategoryId.ToString()
+                                               }).ToList();
+            ViewBag.Category = categories;
+
+            List<SelectListItem> publishers = (from x in _context.Publisher.ToList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.PublisherName,
+                                                   Value = x.PublisherId.ToString()
+                                               }).ToList();
+            ViewBag.Publisher = publishers;
+
+            List<SelectListItem> authors = (from x in _context.Author.ToList()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.AuthorName +"  "+ x.AuthorLastname,
+                                                Value = x.AuthorId.ToString()
+                                            }).ToList();
+            ViewBag.Author = authors;
             ViewData["AuthorId"] = new SelectList(_context.Author, "AuthorId", "AuthorId", book.AuthorId);
             ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "CategoryId", book.CategoryId);
             ViewData["PublisherId"] = new SelectList(_context.Publisher, "PublisherId", "PublisherId", book.PublisherId);

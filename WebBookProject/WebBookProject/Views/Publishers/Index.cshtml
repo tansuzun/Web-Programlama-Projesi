@@ -2,34 +2,42 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+
 }
 
-<h1>Index</h1>
+<h1>Yayınevleri</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PublisherName)
+                Yayınevi Adı
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublisherName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PublisherId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PublisherId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PublisherId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PublisherName)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.PublisherId">Düzenle</a>
+                </td>
+                <td>
+                    <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.PublisherId">Detaylar</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.PublisherId">Sil</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Yayınevi Ekle</a>
+</p>
