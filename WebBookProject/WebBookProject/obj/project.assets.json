@@ -7499,11 +7499,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\WebBookProject\\WebBookProject\\WebBookProject.csproj",
+      "projectUniqueName": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\Web-Programlama-Projesi\\WebBookProject\\WebBookProject\\WebBookProject.csproj",
       "projectName": "WebBookProject",
-      "projectPath": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\WebBookProject\\WebBookProject\\WebBookProject.csproj",
+      "projectPath": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\Web-Programlama-Projesi\\WebBookProject\\WebBookProject\\WebBookProject.csproj",
       "packagesPath": "C:\\Users\\tansu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\WebBookProject\\WebBookProject\\obj\\",
+      "outputPath": "C:\\Users\\tansu\\source\\repos\\WebProgramlama\\Web-Programlama-Projesi\\WebBookProject\\WebBookProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

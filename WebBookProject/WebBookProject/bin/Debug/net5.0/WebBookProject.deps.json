@@ -319,6 +319,11 @@
         "runtime": {
           "WebBookProject.dll": {}
         },
+        "resources": {
+          "en/WebBookProject.resources.dll": {
+            "locale": "en"
+          }
+        },
         "compile": {
           "WebBookProject.dll": {}
         }

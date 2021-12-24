@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WebBookProject.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SidebarLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Kitap Adı</label>
+            </th>
+            <th>
+                <label>Basım Yılı</label>
+            </th>
+            <th>
+                <label>Açıklama</label>
+            </th>
+            <th>
+                <label>Fotoğraf URL'i'</label>
+            </th>
+            <th>
+                <label>Kategori</label>
+            </th>
+            <th>
+                <label>Yayınevi</label>
+            </th>
+            <th>
+                Güncelle
+            </th>
+            <th>
+                Detaylar
+            </th>
+            <th>
+                Sil
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.publishYear)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageUrl)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publisher.PublisherName)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.BookId">Düzenle</a> 
+                </td>
+                <td>
+                    <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.BookId">Detaylar</a> 
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.BookId">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Kitap Ekle</a>
+</p>

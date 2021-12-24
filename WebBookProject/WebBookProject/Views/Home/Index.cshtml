@@ -1,59 +1,86 @@
 ﻿@using WebBookProject.Models
-@model IEnumerable<WebBookProject.Models.AddBook>
+@model WebBookProject.Models.ViewModels.HomeViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
 @{
     ViewData["Title"] = "Home Page";
 }
 
-@foreach (Book item in @Model)
-{
-    <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="@("~/Photos/"+item.ImageUrl)" asp-append-version="true"/>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-            </div>
-        </div>
-}
-
-
-
-
+@*@foreach (AddBook item in @Model)
+    {
         <div class="card-deck">
             <div class="card">
-                <img class="card-img-top" src="~/Photos/0e0882ea-2759-4d80-8a84-2714cd69d346.jpg" />
+                <img class="card-img-top" src="@("~/Photos/"+item.ImageUrl)" asp-append-version="true"/>
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="~/Photos/43d41715-a89f-480a-b4e6-e9ee3c9330bc.jpg" />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
+    }*@
 
-            <div class="card">
-                <img class="card-img-top" src="~/Photos/8f2dd0ef-465a-47b5-8da0-076cbded58cf.jpg" />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="~/Photos/ad771df9-1d08-400c-9134-12d2d67e59cd.jpg" />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-5">
+            <div class="sidebar">
+                <div class="sidebar__item">
+                  @*  <h4>@lang["Category"]</h4>*@
+                    <ul>
+                        @foreach (var item in Model.Book)
+                        {
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="@("~/Photos/"+item.ImageUrl)" asp-append-version="true"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">@item.BookName</h5>
+                                    <p class="card-text">@item.Description</p>
+                                    <p class="card-text"><small class="text-muted">@item.ImageUrl</small></p>
+                                </div>
+                            </div>
+                            </div>
+                         }
+
+</ul>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+@*<div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="~/Photos/0e0882ea-2759-4d80-8a84-2714cd69d346.jpg" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="~/Photos/43d41715-a89f-480a-b4e6-e9ee3c9330bc.jpg" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="card-img-top" src="~/Photos/8f2dd0ef-465a-47b5-8da0-076cbded58cf.jpg" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="~/Photos/ad771df9-1d08-400c-9134-12d2d67e59cd.jpg" />
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+
+</div>*@

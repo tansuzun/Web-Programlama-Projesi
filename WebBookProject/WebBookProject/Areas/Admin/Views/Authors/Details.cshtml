@@ -1,0 +1,37 @@
+﻿@model WebBookProject.Models.Author
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <h4>Yazar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Yazar Adı
+            @*@Html.DisplayNameFor(model => model.AuthorName)*@
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorLastname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AuthorLastname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Biography)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Biography)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AuthorId">Düzenle</a> |
+    <a class="btn btn-info" asp-action="Index">Geri Dön</a>
+</div>
