@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WebBookProject.Models.Category>
+
+@{
+    ViewData["Title"] = "ListCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="card-group">
+        <div class="card">
+            <img asp-area="" asp-controller="ListCategories" asp-action="CategoryGetList" class="card-img-top" src="~/CategoryPhoto/roman.jpg" alt="Roman">
+            <div class="card-body">
+                <h5 class="card-title">Roman</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img asp-area="" asp-controller="ListCategories" asp-action="CategoryGetList" class="card-img-top" src="~/CategoryPhoto/sci.jpg" alt="Bilim Kurgu">
+            <div class="card-body">
+                <h5 class="card-title">Bilim Kurgu</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img asp-area="" asp-controller="ListCategories" asp-action="CategoryGetList" class="card-img-top" src="~/CategoryPhoto/siir.jpg" alt="Siir">
+            <div class="card-body">
+                <h5 class="card-title">Şiir</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img asp-area="" asp-controller="ListCategories" asp-action="CategoryGetList" class="card-img-top" src="~/CategoryPhoto/fantastik.jpg" alt="Fantastik">
+            <div class="card-body">
+                <h5 class="card-title">Fantastik</h5>
+            </div>
+        </div>
+    </div>
+</div>
+

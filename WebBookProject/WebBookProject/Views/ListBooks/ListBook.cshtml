@@ -1,0 +1,165 @@
+﻿@model List<WebBookProject.Models.Book>
+@using WebBookProject.Models
+@using Microsoft.Extensions.Localization
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@*@model WebBookProject.Models.ViewModels.HomeViewModel*@
+
+
+@{
+    Layout = "_Layout";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Kitaplar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="~/table-06/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/table-06/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrap">
+                        <table class="table">
+                            <thead class="thead-primary">
+                                <tr>
+                                    <h4>@localizer["Book"]</h4>
+                                    <th><b>Kitap</b></th>
+                                    <th><b>Yazar</b></th>
+                                    <th><b>Yayınevi</b></th>
+                                    <th><b>Basım Yılı</b></th>
+                                    <th><b>Kategori</b></th>
+                                    <th><b> Açıklama</b></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+
+                                    <tr class="alert" role="alert">
+                                        <td>
+                                            <div>
+                                                <img style=" width:120px; height:180px;" class="card-img-top" src="@("~/Photos/" + item.ImageUrl)" asp-append-version="true" />
+                                            </div>
+                                        </td>
+                                        <td>@item.Author.AuthorName<i> </i>@item.Author.AuthorLastname</td>
+
+                                        <td>@item.Publisher.PublisherName</td>
+                                        <td>
+                                            @item.publishYear
+                                        </td>
+                                        <td>
+                                            @item.Category.CategoryName
+                                        </td>
+                                        <td>
+                                            <div class="email">
+                                                <span>@item.Description</span>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/table-06/js/bootstrap.min.js"></script>
+    <script src="~/table-06/js/jquery.min.js"></script>
+    <script src="~/table-06/js/main.js"></script>
+    <script src="~/table-06/js/popper.js"></script>
+</body>
+</html>
+
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>ListBook</title>
+    </head>
+    <body>
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BookName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.publishYear)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ImageUrl)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Publisher)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Author)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BookName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.publishYear)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImageUrl)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category.CategoryId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Publisher.PublisherId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Author.AuthorId)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.BookId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.BookId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.BookId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+    </html>*@

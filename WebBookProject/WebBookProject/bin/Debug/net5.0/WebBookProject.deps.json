@@ -320,8 +320,11 @@
           "WebBookProject.dll": {}
         },
         "resources": {
-          "en/WebBookProject.resources.dll": {
-            "locale": "en"
+          "en-US/WebBookProject.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/WebBookProject.resources.dll": {
+            "locale": "tr-TR"
           }
         },
         "compile": {
