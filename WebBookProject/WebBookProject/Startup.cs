@@ -46,19 +46,6 @@ namespace WebBookProject
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
-            //services.AddIdentity<ApplicationUser, IdentityRole>(options => {
-            //    options.Password.RequireDigit = false;
-            //    options.Password.RequiredLength = 4;
-            //    options.Password.RequireNonAlphanumeric = false;
-            //    options.Password.RequireUppercase = false;
-            //    options.Password.RequireLowercase = false;
-            //})
-            //  .AddEntityFrameworkStores<ApplicationDbContext>()
-            //  .AddDefaultUI()
-            //  .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>(TokenOptions.DefaultProvider);
-
             services.AddControllersWithViews();
 
             services.AddScoped<IDbInitializer, DbInitializer>();
