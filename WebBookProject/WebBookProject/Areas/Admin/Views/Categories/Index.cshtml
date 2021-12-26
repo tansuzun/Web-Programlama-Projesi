@@ -1,18 +1,19 @@
 ﻿@model IEnumerable<WebBookProject.Models.Category>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Kategori";
     Layout = "~/Views/Shared/_SidebarLayout.cshtml";
 }
-
-
+<p>
+    <a class="btn btn-primary" style="color:white" asp-area="Admin" asp-controller="Categories" asp-action="Create">Kategori Ekle</a>
+</p>
 
 <div>
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.CategoryName)
+                   Kategori
                 </th>
                 <th>
                     Güncelle
@@ -33,19 +34,17 @@
                         @Html.DisplayFor(modelItem => item.CategoryName)
                     </td>
                     <td>
-                        <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.CategoryId">Düzenle</a> |
+                        <a class="btn btn-success" style="color:white" asp-action="Edit" asp-route-id="@item.CategoryId">Düzenle</a>
                     </td>
                     <td>
-                        <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.CategoryId">Detaylar</a> |
+                        <a class="btn btn-dark" style="color:white" asp-action="Details" asp-route-id="@item.CategoryId">Detaylar</a>
                     </td>
                     <td>
-                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.CategoryId">Sil</a>
+                        <a class="btn btn-danger" style="color:white" asp-action="Delete" asp-route-id="@item.CategoryId">Sil</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-    <p>
-        <a class="btn btn-primary" asp-area="Admin" asp-controller="Categories" asp-action="Create">Kategori Ekle</a>
-    </p>
+
 </div>

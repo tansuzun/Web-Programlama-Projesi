@@ -14,6 +14,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using WebBookProject.Data;
+using WebBookProject.Models;
 
 namespace WebBookProject
 {
@@ -29,6 +30,8 @@ namespace WebBookProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+          
+
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
             services.AddIdentity<IdentityUser, IdentityRole>()
@@ -43,11 +46,19 @@ namespace WebBookProject
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            //services.AddLocalization(opt => { opt.ResourcesPath = "Resources"});
-            services.AddMvc().AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
-
             //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddIdentity<ApplicationUser, IdentityRole>(options => {
+            //    options.Password.RequireDigit = false;
+            //    options.Password.RequiredLength = 4;
+            //    options.Password.RequireNonAlphanumeric = false;
+            //    options.Password.RequireUppercase = false;
+            //    options.Password.RequireLowercase = false;
+            //})
+            //  .AddEntityFrameworkStores<ApplicationDbContext>()
+            //  .AddDefaultUI()
+            //  .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>(TokenOptions.DefaultProvider);
+
             services.AddControllersWithViews();
 
             services.AddScoped<IDbInitializer, DbInitializer>();
@@ -68,24 +79,20 @@ namespace WebBookProject
                 app.UseHsts();
             }
 
-
             var supportedCultures = new[]
-            {
-                "en","tr"
+{
+                new CultureInfo("tr-TR"),
+                new CultureInfo("en-Us")
 
             };
 
-            var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
-                .AddSupportedCultures(supportedCultures)
-                .AddSupportedUICultures(supportedCultures);
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("tr-TR"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            });
 
-            app.UseRequestLocalization(localizationOptions);
-            //app.UseRequestLocalization(new RequestLocalizationOptions
-            //{
-            //    DefaultRequestCulture = new RequestCulture("tr-TR"),
-            //    SupportedCultures = supportedCultures,
-            //    SupportedUICultures = supportedCultures
-            //});
 
             dbInitializer.Initialize();
 

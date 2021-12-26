@@ -296,28 +296,6 @@ namespace WebBookProject.Data.Migrations
                     b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("WebBookProject.Models.Comment", b =>
-                {
-                    b.Property<int>("CommentId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CommentId");
-
-                    b.HasIndex("ApplicationUserId");
-
-                    b.HasIndex("BookId");
-
-                    b.ToTable("Comments");
-                });
-
             modelBuilder.Entity("WebBookProject.Models.Publisher", b =>
                 {
                     b.Property<int>("PublisherId")
@@ -422,23 +400,6 @@ namespace WebBookProject.Data.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Publisher");
-                });
-
-            modelBuilder.Entity("WebBookProject.Models.Comment", b =>
-                {
-                    b.HasOne("WebBookProject.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany()
-                        .HasForeignKey("ApplicationUserId");
-
-                    b.HasOne("WebBookProject.Models.Book", "Book")
-                        .WithMany()
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationUser");
-
-                    b.Navigation("Book");
                 });
 #pragma warning restore 612, 618
         }

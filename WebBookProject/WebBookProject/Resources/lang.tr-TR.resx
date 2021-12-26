@@ -120,11 +120,32 @@
   <data name="Author" xml:space="preserve">
     <value>Yazar</value>
   </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Yazarlar</value>
+  </data>
   <data name="Book" xml:space="preserve">
     <value>Kitap</value>
   </data>
+  <data name="Books" xml:space="preserve">
+    <value>Kitaplar</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategoriler</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Kategori</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>İngilizce</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Ana Sayfa</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Diller</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Giriş Yap</value>
@@ -132,10 +153,22 @@
   <data name="Logout" xml:space="preserve">
     <value>Çıkış Yap</value>
   </data>
+  <data name="Publish Year" xml:space="preserve">
+    <value>Basım Yılı</value>
+  </data>
   <data name="Publisher" xml:space="preserve">
     <value>Yayınevi</value>
   </data>
+  <data name="Publishers" xml:space="preserve">
+    <value>Yayınevleri</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Kaydol</value>
+  </data>
+  <data name="Turkish" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Hoş geldiniz</value>
   </data>
 </root>

@@ -73,7 +73,7 @@ namespace WebBookProject.Controllers
             List<SelectListItem> authors = (from x in _context.Author.ToList()
                                                select new SelectListItem
                                                {
-                                                   Text = x.AuthorName+x.AuthorLastname,
+                                                   Text = x.AuthorName+" "+x.AuthorLastname,
                                                    Value = x.AuthorId.ToString()
                                                }).ToList();
             ViewBag.Author = authors;

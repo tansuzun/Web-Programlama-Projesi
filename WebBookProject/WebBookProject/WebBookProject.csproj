@@ -36,10 +36,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Kullanici\Controllers\" />
-    <Folder Include="Areas\Kullanici\Data\" />
-    <Folder Include="Areas\Kullanici\Models\" />
-    <Folder Include="Areas\Kullanici\Views\" />
     <Folder Include="wwwroot\Photos\" />
   </ItemGroup>
 

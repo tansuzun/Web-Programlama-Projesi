@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<WebBookProject.Models.Book>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Kitap";
     Layout = "~/Views/Shared/_SidebarLayout.cshtml";
 }
+<p>
+    <a asp-action="Create" class="btn btn-primary" style="color:white">Kitap Ekle</a>
+</p>
 
-<h1>Index</h1>
 
 <table class="table">
     <thead>
@@ -62,18 +64,15 @@
                     @Html.DisplayFor(modelItem => item.Publisher.PublisherName)
                 </td>
                 <td>
-                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.BookId">Düzenle</a> 
+                    <a class="btn btn-success" style="color:white" asp-action="Edit" asp-route-id="@item.BookId">Düzenle</a>
                 </td>
                 <td>
-                    <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.BookId">Detaylar</a> 
+                    <a class="btn btn-dark" style="color:white" asp-action="Details" asp-route-id="@item.BookId">Detaylar</a>
                 </td>
                 <td>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.BookId">Sil</a>
+                    <a class="btn btn-danger" style="color:white" asp-action="Delete" asp-route-id="@item.BookId">Sil</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<p>
-    <a class="btn btn-primary" asp-area="Admin" asp-controller="Books" asp-action="Create">Kitap Ekle</a>
-</p>

@@ -11,7 +11,6 @@ namespace WebBookProject.Data
     {
         public DbSet<Book> Book { get; set; }
         public DbSet<Category> Category { get; set; }
-        public DbSet<Comment> Comments { get; set; }
         public DbSet<Publisher> Publisher { get; set; }
         public DbSet<Author> Author { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }

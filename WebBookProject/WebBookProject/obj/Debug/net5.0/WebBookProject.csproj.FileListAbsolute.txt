@@ -378,7 +378,6 @@ C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProjec
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Publishers\Index.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\ListBooks\ListBook.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\ListCategories\ListCategory.cshtml.g.cs
-C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\ListCategories\CategoryGetList.cshtml.g.cs
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\bin\Debug\net5.0\en-US\WebBookProject.resources.dll
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\bin\Debug\net5.0\tr-TR\WebBookProject.resources.dll
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\WebBookProject.Resources.lang.resources
@@ -386,3 +385,7 @@ C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProjec
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\WebBookProject.Resources.lang.tr-TR.resources
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\en-US\WebBookProject.resources.dll
 C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\tr-TR\WebBookProject.resources.dll
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\tansu\source\repos\WebProgramlama\Web-Programlama-Projesi\WebBookProject\WebBookProject\obj\Debug\net5.0\Razor\Views\ListAuthors\ListAuthor.cshtml.g.cs

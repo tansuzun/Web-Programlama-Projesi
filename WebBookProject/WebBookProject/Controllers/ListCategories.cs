@@ -18,17 +18,10 @@ namespace WebBookProject.Controllers
             _context = context;
         }
 
-        // GET: Categories
-        public async Task<IActionResult> CategoryGetList()
-        {
-            var categoryBooks = _context.Book.Include(b => b.Category).Where(x => x.CategoryId == x.Category.CategoryId).ToList();
-            return View(categoryBooks);
-           // return View(await _context.Category.ToListAsync());
-        }
-
+    
         public async Task<IActionResult> ListCategory()
         {
-            var categoryBooks = _context.Book.Include(b => b.Category).Where(x => x.CategoryId == x.Category.CategoryId).ToList();
+            var categoryBooks = _context.Book.Where(x => x.CategoryId == x.Category.CategoryId).ToList();
             return View(categoryBooks);
             // return View(await _context.Category.ToListAsync());
         }
